@@ -8,22 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		C2D915841D8D862D00D6B252 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D915831D8D862D00D6B252 /* AppDelegate.swift */; };
-		C2D915861D8D862D00D6B252 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D915851D8D862D00D6B252 /* ViewController.swift */; };
 		C2D915891D8D862D00D6B252 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2D915871D8D862D00D6B252 /* Main.storyboard */; };
 		C2D9158C1D8D862D00D6B252 /* Diario_de_Classe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C2D9158A1D8D862D00D6B252 /* Diario_de_Classe.xcdatamodeld */; };
 		C2D9158E1D8D862D00D6B252 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2D9158D1D8D862D00D6B252 /* Assets.xcassets */; };
 		C2D915911D8D862D00D6B252 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2D9158F1D8D862D00D6B252 /* LaunchScreen.storyboard */; };
+		C2D9159C1D8D8B5A00D6B252 /* TurmasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D9159B1D8D8B5A00D6B252 /* TurmasTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C2D915801D8D862D00D6B252 /* Diario de Classe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Diario de Classe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2D915831D8D862D00D6B252 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C2D915851D8D862D00D6B252 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C2D915881D8D862D00D6B252 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C2D9158B1D8D862D00D6B252 /* Diario_de_Classe.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Diario_de_Classe.xcdatamodel; sourceTree = "<group>"; };
 		C2D9158D1D8D862D00D6B252 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C2D915901D8D862D00D6B252 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C2D915921D8D862D00D6B252 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2D9159B1D8D8B5A00D6B252 /* TurmasTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TurmasTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +56,48 @@
 		C2D915821D8D862D00D6B252 /* Diario de Classe */ = {
 			isa = PBXGroup;
 			children = (
+				C2D9159E1D8D8B8400D6B252 /* TurmaController */,
+				C2D915981D8D86DA00D6B252 /* Support Files */,
+				C2D915991D8D876A00D6B252 /* View */,
+				C2D9159A1D8D877D00D6B252 /* Data Model */,
+			);
+			path = "Diario de Classe";
+			sourceTree = "<group>";
+		};
+		C2D915981D8D86DA00D6B252 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
 				C2D915831D8D862D00D6B252 /* AppDelegate.swift */,
-				C2D915851D8D862D00D6B252 /* ViewController.swift */,
-				C2D915871D8D862D00D6B252 /* Main.storyboard */,
 				C2D9158D1D8D862D00D6B252 /* Assets.xcassets */,
 				C2D9158F1D8D862D00D6B252 /* LaunchScreen.storyboard */,
 				C2D915921D8D862D00D6B252 /* Info.plist */,
+			);
+			name = "Support Files";
+			sourceTree = "<group>";
+		};
+		C2D915991D8D876A00D6B252 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C2D915871D8D862D00D6B252 /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		C2D9159A1D8D877D00D6B252 /* Data Model */ = {
+			isa = PBXGroup;
+			children = (
 				C2D9158A1D8D862D00D6B252 /* Diario_de_Classe.xcdatamodeld */,
 			);
-			path = "Diario de Classe";
+			name = "Data Model";
+			sourceTree = "<group>";
+		};
+		C2D9159E1D8D8B8400D6B252 /* TurmaController */ = {
+			isa = PBXGroup;
+			children = (
+				C2D9159B1D8D8B5A00D6B252 /* TurmasTableViewController.swift */,
+			);
+			name = TurmaController;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +171,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2D9159C1D8D8B5A00D6B252 /* TurmasTableViewController.swift in Sources */,
 				C2D9158C1D8D862D00D6B252 /* Diario_de_Classe.xcdatamodeld in Sources */,
-				C2D915861D8D862D00D6B252 /* ViewController.swift in Sources */,
 				C2D915841D8D862D00D6B252 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
