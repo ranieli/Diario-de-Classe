@@ -49,7 +49,7 @@ class TurmaViewController: UIViewController {
     func updateUI(){
         
         labelAno?.text = String(ano ?? 0)
-        labelSemestre?.text = String(semestre) ?? ""
+        labelSemestre?.text = String(semestre ?? 0)
         labelInstituicao?.text = instituicao
         labelCurso?.text=curso
         labelDisciplina?.text = disciplina
