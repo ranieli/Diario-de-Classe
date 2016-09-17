@@ -45,7 +45,12 @@ class TurmasTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell_identifier", forIndexPath: indexPath)
 
         // Configure the cell...
-        cell.textLabel?.text = turmas[indexPath.row].disciplina
+        //cell.textLabel?.text = turmas[indexPath.row].disciplina
+        
+        if let celula = cell as? TurmaTableViewCell {
+            let (ano, semestre, instituicao, curso, disciplina) = turmas[indexPath.row]
+            celula.configure(ano, semestre, instituicao, curso, disciplina)
+        }
 
         return cell
     }
@@ -86,14 +91,30 @@ class TurmasTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "showDetail" {
+            if let indexPath = self.tableView.indexPathForSelectedRow{
+                let (ano, semestre, instituicao, curso, disciplina) = turmas[indexPath.row]
+                if let navcon = segue.destinationViewController as? UINavigationController{
+                    if let destino = navcon.visibleViewController as? TurmaViewController{
+                        destino.ano = ano
+                        destino.semestre = semestre
+                        destino.instituicao = instituicao
+                        destino.curso = curso
+                        destino.disciplina = disciplina
+                    }
+                }
+            }
+        }
+        
+        
     }
-    */
+    
 
 }
